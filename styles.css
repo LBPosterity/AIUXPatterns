@@ -70,3 +70,43 @@ iframe
   }
 
 }
+
+
+/* Columns ----------------------------- */
+
+.col-wrapper
+{
+  display: flex;
+  flex-direction: row;
+  gap: var(--size-4);
+}
+
+.col-wrapper .col
+{
+  width: 100%;
+}
+
+
+/* Patterns ----------------------------- */
+
+.pattern-listing
+{
+
+  padding-bottom: 25vh;
+
+  .content-wrapper h1
+  {
+    padding-block: var(--size-3);
+  }
+
+  .content-wrapper .col-wrapper .col:first-of-type
+  {
+    flex-grow: 3;
+  }
+
+  .content-wrapper .col-wrapper .col:first-of-type p
+  {
+    font-size: var(--text-large);
+  }
+
+}
