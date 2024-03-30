@@ -12,9 +12,10 @@ img
 
 html
 {
-  background: linear-gradient(90deg, var(--blue-100) 0%, var(--green-100) 100%);
+  background: linear-gradient(90deg, white 0%, var(--purple-50) 100%);
   background-attachment: fixed;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 .no-scroll html,
@@ -26,15 +27,15 @@ html
 body 
 {
   font-family: sans-serif;
-  margin-block-end: 20vh;
   margin-inline: auto;
-  width: min(1000px, 90%);
+  width: 90vw;
 }
 
 ul
 {
   padding-inline-start: var(--size-3) !important;
 }
+
 
 
 /* Header ----------------------------- */
@@ -53,13 +54,14 @@ nav
 
 iframe
 {
-  --width: 1000px;
+  --width: 90vw;
   width: var(--width);
   height: calc(var(--width) / 1.65);
   border: 0px solid white;
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: black;
+  margin-block: var(--size-4);
 }
 
 @media screen and (max-width: 1100px){
@@ -76,27 +78,92 @@ iframe
 
 .col-wrapper
 {
-  display: flex;
-  flex-direction: row;
-  gap: var(--size-4);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: var(--size-6);
 }
 
-.col-wrapper .col
+
+          @media screen and (max-width: 1000px){
+            .col-wrapper
+            {
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+
+              @media screen and (max-width: 600px){
+                .col-wrapper
+                {
+                  grid-template-columns: repeat(1, 1fr);
+                }
+              }
+
+/* Intro Wrapper ----------------------------- */
+
+.intro-wrapper
 {
-  width: 100%;
+  min-height: 66vh;
+  border-radius: var(--radius-lg);
+  background: var(--purple-900);
+  background: radial-gradient(circle at 0% 120%, #000013 10%, #001C3E 80%, #5D00D2 80%, #002344 100%);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
+  justify-content: center;
+  align-items: center;
+  margin-block: var(--size-3);
+  padding-block: var(--size-2);
+  padding-inline: 20vw;
+  text-align: center;
+  position: relative;
+}
+
+.intro-wrapper::before
+{
+  content: '';
+  position: absolute;
+  left: 0%;
+  bottom: -15%;
+  background: radial-gradient(#5D00D2 0%, transparent 60%);
+  width: 50%;
+  height: 66%;
+  opacity: 0.15;
+  transform: rotate(33deg);
+}
+
+.intro-wrapper::after
+{
+  content: '';
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  background: radial-gradient(#8c2eff 0%, transparent 50%);
+  width: 25%;
+  height: 20%;
+  opacity: 0.1;
+  transform: rotate(33deg);
+}
+
+.intro-wrapper h1, .intro-wrapper p
+{
+  text-wrap: balance;
 }
 
 
 /* Patterns ----------------------------- */
 
+.patterns-intro
+{
+  margin-block: var(--size-6);
+  max-width: 50vw;
+}
+
 .pattern-listing
 {
 
-  padding-bottom: 25vh;
-
   .content-wrapper h1
   {
-    padding-block: var(--size-3);
+    
   }
 
   .content-wrapper .col-wrapper .col:first-of-type
@@ -109,4 +176,111 @@ iframe
     font-size: var(--text-large);
   }
 
+}
+
+
+
+
+
+/* Pattern Listing ------------------------------ */
+
+.patterns-wrapper
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: var(--size-4);
+
+    article
+    {
+      position: relative;
+      
+        img
+        {
+          border-radius: var(--size-0-5);
+          margin-bottom: var(--size-2);
+        }
+
+        h3
+        {
+          margin-bottom: var(--size-0-5);
+        }
+
+        div[class*="tag-"]
+        {
+          position: absolute;
+          top: var(--size-1);
+          right: var(--size-1);
+        }
+      
+  }
+
+}
+
+div[class*="tag-"]
+{
+  font-size: var(--text-xsmall);
+  border-radius: var(--radius-rounded);
+  padding: 0 var(--size-1);
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+    div[class*="tag-author"]
+    {
+      --tag-bg: var(--purple-100);
+      --tag-text: var(--purple-800);
+    }
+
+    div[class*="tag-author"]:after
+    {
+      content: 'Prompt Authoring';
+    }
+
+    div[class*="tag-settings"]
+    {
+      --tag-bg: var(--purple-200);
+      --tag-text: var(--purple-900);
+    }
+
+    div[class*="tag-settings"]:after
+    {
+      content: 'Prompt Settings';
+    }
+
+
+        @media screen and (max-width: 1000px)
+        {
+
+          .intro-wrapper
+          {
+            padding-inline: 10vw;
+          }
+
+          .patterns-wrapper
+          {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+                @media screen and (max-width: 600px)
+                {
+                  .patterns-wrapper
+                  {
+                    grid-template-columns: repeat(1, 1fr);
+                  }
+                }
+
+
+/* Footer ---------------------------- */
+
+#footer
+{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--size-4);
+  margin-block: var(--size-6);
 }

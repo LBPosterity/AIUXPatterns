@@ -29,7 +29,7 @@ hr
   
   --size-base: 0.8rem;
   --text-base: 1.6rem; /* base text size */
-  --text-ratio: 1.1; /*ratio - heading to base*/
+  --text-ratio: 1.16; /*ratio - heading to base*/
   --line-height-base: 1.6; 
   --space-after-base: 1.33ch;
   
@@ -316,6 +316,7 @@ hr
   :root
   {
   --text-base: 1.4rem;
+  --text-ratio: 1.1; /*ratio - heading to base*/
   }
 }
 
@@ -331,9 +332,19 @@ body, p, label, ul, li, details, summary
     margin-block-end: var(--space-after-base);
 }
 
+p.xsmall
+{
+  font-size: var(--text-xsmall);
+}
+
 p.small
 {
   font-size: var(--text-small);
+}
+
+p.large
+{
+  font-size: var(--text-large);
 }
 
 h1, h2, h3, h4, h5, h6

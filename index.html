@@ -23,9 +23,21 @@
 
   <div id="header"></div>
 
-  <h1>AI UI Patterns</h1>
 
-  <a href="patterns/pattern-a.html"><button>Pattern A</button></a>
+  <div class="intro-wrapper invert-theme">
+    <h1>Artificial Intelligence User Interface Design Patterns</h1>
+    <p class="large">An exploration of the UI & UX patterns we may need when crafting the new wave of products integrating AI.</p>
+    <button class="btn-primary">See Patterns</button>
+    <button class="btn-secondary">Overview</button>
+  </div>
+
+  <section>
+
+    <div id="pattern-set"></div>
+
+  </section>
+
+  <div id="footer"></div>
 
 <script type="text/javascript" src="scripts-ui.js"></script>
 
@@ -36,7 +48,9 @@
 <script>
 
   $(document).ready(function (){
-    $( '#header').load("header.html");
+    $('#header').load("header.html");
+    $('#pattern-set').load("patterns.html");
+    $('#footer').load("footer.html");
   });
 
 </script>
