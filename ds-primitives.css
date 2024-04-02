@@ -29,7 +29,7 @@ hr
   
   --size-base: 0.8rem;
   --text-base: 1.6rem; /* base text size */
-  --text-ratio: 1.16; /*ratio - heading to base*/
+  --text-ratio: 1.18; /*ratio - heading to base*/
   --line-height-base: 1.6; 
   --space-after-base: 1.33ch;
   
@@ -316,7 +316,7 @@ hr
   :root
   {
   --text-base: 1.4rem;
-  --text-ratio: 1.1; /*ratio - heading to base*/
+  --text-ratio: 1.14; /*ratio - heading to base*/
   }
 }
 

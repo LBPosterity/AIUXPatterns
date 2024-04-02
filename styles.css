@@ -1,3 +1,8 @@
+:root
+{
+  --site-width: min( 1280px, 90vw);
+}
+
 *
 {
   box-sizing: border-box;
@@ -12,7 +17,7 @@ img
 
 html
 {
-  background: linear-gradient(90deg, white 0%, var(--purple-50) 100%);
+  background: linear-gradient(33deg, white 0%, var(--purple-50) 100%);
   background-attachment: fixed;
   margin: 0;
   scroll-behavior: smooth;
@@ -28,7 +33,7 @@ body
 {
   font-family: sans-serif;
   margin-inline: auto;
-  width: 90vw;
+  width: var(--site-width);
 }
 
 ul
@@ -45,6 +50,7 @@ nav
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   gap: var(--size-3);
   padding-block: var(--size-2);
 }
@@ -54,9 +60,9 @@ nav
 
 iframe
 {
-  --width: 90vw;
+  --width: var(--site-width);
   width: var(--width);
-  height: calc(var(--width) / 1.65);
+  height: calc(var(--width) / 1.67);
   border: 0px solid white;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -80,7 +86,7 @@ iframe
 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: var(--size-6);
+  grid-gap: var(--size-4);
 }
 
 
@@ -97,6 +103,132 @@ iframe
                   grid-template-columns: repeat(1, 1fr);
                 }
               }
+
+
+
+
+/* Buttons ------------------------------------ */
+
+
+
+button, button[class*="btn-"]
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap:var(--size-1);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: var(--size-1) var(--size-2);
+  transition: var(--transition);
+}
+
+a:has(button)
+{
+  text-decoration: none;
+  width: fit-content;
+}
+
+button[class*="btn-primary"]
+{
+  background: var(--purple-800);
+  color: var(--white);
+}
+
+        button[class*="btn-primary"]:hover
+        {
+          background: var(--purple-900);
+          color: var(--white);
+        }
+
+
+button[class*="btn-secondary"]
+{
+  background: var(--purple-100);
+  color: var(--purple-600);
+}
+
+        button[class*="btn-secondary"]:hover
+        {
+          background: var(--purple-200);
+        }
+
+button[class*="btn-tertiary"]
+{
+  background: transparent;
+  color: var(--purple-700);
+}
+
+        button[class*="btn-tertiary"]:hover
+        {
+         background: var(--purple-100); 
+        }
+
+
+.button-pair
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--size-2);
+}
+
+
+
+.invert-theme
+{
+
+  button[class*="btn-secondary"]
+  {
+    background: rgba(255, 255, 180, 0.08);
+    color: var(--white);
+  }
+
+}
+
+
+
+
+/* Menu ----------------------------------------- */
+
+.menu-wrapper
+{
+  display: flex;
+  flex-direction: row;
+  gap: var(--size-1);
+}
+
+
+
+
+/* Notification -------------------------------------- */
+
+.notification-mobile,
+.notification-mobile.hide
+{
+  display: none;
+}  
+
+
+@media screen and (max-width: 600px)
+{
+    .notification-mobile
+    {
+      display: flex;
+      flex-direction: row;
+      gap: var(--size-1);
+      padding: var(--size-1) var(--size-2);
+      border-radius: var(--radius-md);
+      background-color: var(--orange-100);
+      border: 1px solid var(--orange-500);
+      color: var(--orange-800);
+    }   
+}
+
+
+
+
 
 /* Intro Wrapper ----------------------------- */
 
@@ -155,15 +287,22 @@ iframe
 .patterns-intro
 {
   margin-block: var(--size-6);
-  max-width: 50vw;
+  max-width: 66vw;
 }
 
 .pattern-listing
 {
 
+  .content-wrapper
+  {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-2);
+  }
+
   .content-wrapper h1
   {
-    
+
   }
 
   .content-wrapper .col-wrapper .col:first-of-type
@@ -220,7 +359,7 @@ div[class*="tag-"]
 {
   font-size: var(--text-xsmall);
   border-radius: var(--radius-rounded);
-  padding: 0 var(--size-1);
+  padding: var(--size-0-5) var(--size-2);
   background: var(--tag-bg);
   color: var(--tag-text);
   width: fit-content;
