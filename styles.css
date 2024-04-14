@@ -60,6 +60,7 @@ nav
 
 iframe
 {
+  position: relative;
   --width: var(--site-width);
   width: var(--width);
   height: calc(var(--width) / 1.67);
@@ -67,7 +68,27 @@ iframe
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: black;
+}
+
+.iframe-wrapper
+{
+  overflow: hidden;
+  position: relative;
   margin-block: var(--size-4);
+}
+
+.iframe-wrapper::after
+{
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: block;
+  width: 1000px;
+  height: 400px;
+  background: radial-gradient(ellipse at 50% -30%, #333 0%, transparent 66%);
+  animation: iframeloader 3s 2 forwards;
+  z-index: 1;
 }
 
 @media screen and (max-width: 1100px){
@@ -77,6 +98,18 @@ iframe
     --width: 90vw;
   }
 
+}
+
+@keyframes iframeloader {
+  0%
+  {
+    left: -100%;
+  }
+  100%
+  {
+    left: 100%;
+  }
+  
 }
 
 
@@ -350,6 +383,12 @@ button[class*="btn-tertiary"]
           top: var(--size-1);
           right: var(--size-1);
         }
+
+        div[class*="tag-coming"]
+        {
+          left: var(--size-1);
+          right: auto;
+        }
       
   }
 
@@ -386,6 +425,17 @@ div[class*="tag-"]
     div[class*="tag-settings"]:after
     {
       content: 'Prompt Settings';
+    }
+
+    div[class*="tag-coming"]
+    {
+      --tag-bg: var(--grey-800);
+      --tag-text: var(--grey-200);
+    }
+
+    div[class*="tag-coming"]:after
+    {
+      content: 'Coming Soon';
     }
 
 
