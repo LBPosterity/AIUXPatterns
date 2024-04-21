@@ -2,18 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="Every Asset" content="">
+  <meta name="AI UI Patterns" content="">
   <meta name="keywords" content="HTML,CSS,XML,JavaScript">
   <meta name="author" content="Luke Bennis">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI UI Patterns Listing</title>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+  <link rel="stylesheet" type="text/css" href="ds-primitives.css">
+  <link rel="stylesheet" type="text/css" href="ds-tokens.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+
 </head>
 
     
-<body>
+<body id="page-patterns">
 
-  <div class="patterns-intro">
+  <div id="header"></div>
+
+  <div class="page-intro">
 
     <h1>Patterns</h1>
     <p class="large">An exploration of the UI & UX patterns applicable to interacting with AI.
@@ -25,69 +37,165 @@
 
   <div class="patterns-wrapper">
 
-      <article>
-        <img src="https://images.unsplash.com/photo-1636690513351-0af1763f6237?q=80&w=871">
-        <h3>Pattern A</h3>
+    <article>
+      <div class="content-wrapper">
+        <img src="assets/thumbnail-raw-text.png">
+        <h4>Raw Text Input</h4>
         <div class="tag-author"></div>
-        <p>Short pattern description text</p>
+        <p>The most basic and straight forward input, raw text directly prompting the AI.</p>
+      </div>
+      <a href="/patterns/pattern-raw-text-input.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
+    </article>
+
+      <article>
+        <div class="content-wrapper">
+          <img src="assets/thumbnail-inline-help.png">
+          <h4>Inline Help</h4>
+          <div class="tag-author"></div>
+          <p>Subtle help information presented inline with other UI elements.</p>
+        </div>
         <a href="/patterns/pattern-inline-help.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
       </article>
 
       <article>
-        <img src="https://images.unsplash.com/photo-1636690513351-0af1763f6237?q=80&w=871">
-        <h3>Pattern A</h3>
+        <div class="content-wrapper">
+        <img src="assets/thumbnail-voice-input.png">
+        <h4>Voice Input</h4>
         <div class="tag-author"></div>
-        <p>Short pattern description text</p>
-        <a href="/patterns/pattern-a.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
+        <p>Similar to raw text but more natural using voice input.</p>
+        </div>
+        <a href="/patterns/pattern-voice-input.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
       </article>
 
       <article>
-        <img src="https://images.unsplash.com/photo-1636690513351-0af1763f6237?q=80&w=871">
-        <h3>Pattern A</h3>
+        <div class="content-wrapper">
+        <img src="assets/thumbnail-inline-suggestion.png">
+        <h4>Inline Prompt Suggestions</h4>
         <div class="tag-author"></div>
-        <p>Short pattern description text</p>
-        <a href="/patterns/pattern-a.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
+        <p>AI powered suggestions to complete prompts while being authored.</p>
+        </div>
+        <a href="/patterns/pattern-dynamic-suggestions.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
       </article>
 
       <article>
-        <img src="https://images.unsplash.com/photo-1636690513351-0af1763f6237?q=80&w=871">
-        <h3>Pattern A</h3>
+        <div class="content-wrapper">
+          <img src="assets/thumbnail-inline-feedback.png">
+        <h4>Prompt Quality Feedback</h4>
         <div class="tag-author"></div>
-        <p>Short pattern description text</p>
-        <a href="/patterns/pattern-a.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
+        <p>Providing indication of a prompts quality or level of details while it's being authored.</p>
+        </div>
+        <a href="/patterns/pattern-quality-feedback.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
       </article>
 
       <article>
-        <img src="https://images.unsplash.com/photo-1636690513351-0af1763f6237?q=80&w=871">
-        <h3>Pattern A</h3>
+        <div class="content-wrapper">
+        <img src="assets/thumbnail-structured-prompt.png">
+        <h4>Structured Prompt</h4>
         <div class="tag-author"></div>
-        <p>Short pattern description text</p>
-        <a href="/patterns/pattern-a.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
+        <p>Providing the required structure & detail required for the prompt. Scaffolding the users input.</p>
+        </div>
+        <a href="/patterns/pattern-structured-prompt.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
       </article>
 
       <article>
-        <img src="https://images.unsplash.com/photo-1636690513351-0af1763f6237?q=80&w=871">
-        <h3>Pattern A</h3>
-        <div class="tag-settings"></div>
-        <p>Short pattern description text</p>
-        <a href="/patterns/pattern-a.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
+        <div class="content-wrapper">
+        <img src="assets/thumbnail-structured-pagination.png">
+        <h4>Paginated Prompt</h4>
+        <div class="tag-author"></div>
+        <p>Like the structured prompt accept paginated to create a focused workflow.</p>
+        </div>
+        <a href="/patterns/pattern-structured-prompt-pagination.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
       </article>
 
       <article>
-        <img src="https://images.unsplash.com/photo-1636690513351-0af1763f6237?q=80&w=871">
-        <h3>Pattern A</h3>
+        <div class="content-wrapper">
+        <img src="assets/thumbnail-assistant.png">
+        <h4>AI Editing Assistance</h4>
+        <div class="tag-author"></div><div class="tag-coming"></div>
+        <p>Pre prompt submission AI assisted prompt editing.</p>
+        </div>
+        <a href="/patterns/pattern-assisted-authoring.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
+      </article>
+
+      <article>
+        <div class="content-wrapper">
+        <img src="assets/thumbnail-configure.png">
+        <h4>Configurable Controls</h4>
+        <div class="tag-author"></div>
+        <p>Highly abstracted prompt authoring using configured options & controls.</p>
+        </div>
+        <a href="/patterns/pattern-configure-controls.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
+      </article>
+
+      <article>
+        <div class="content-wrapper">
+        <img src="assets/thumbnail-inline-options.png">
+        <h4>Cloze Passage Variables</h4>
+        <div class="tag-author"></div>
+        <p>Prompt variables presented in a conversation cloze passage style.</p>
+        </div>
+        <a href="/patterns/pattern-inline-variables.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
+      </article>
+
+      <article class="coming">
+        <div class="content-wrapper">
+        <img src="assets/thumbnail-placeholder.png">
+        <h4>Thread Options</h4>
         <div class="tag-settings"></div><div class="tag-coming"></div>
-        <p>Short pattern description text</p>
-        <a href="/patterns/pattern-a.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
+        <p>Providing users control over the context of their results. Are they threaded or a fresh question each time.</p>
+        </div>
+        <a href="/patterns/pattern-???.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
+      </article>
+
+      <article class="coming">
+        <div class="content-wrapper">
+        <img src="assets/thumbnail-placeholder.png">
+        <h4>Model Selections</h4>
+        <div class="tag-settings"></div><div class="tag-coming"></div>
+        <p>Providing users control over the context of their results. Are they threaded or a fresh question each time.</p>
+        </div>
+        <a href="/patterns/pattern-???.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
+      </article>
+
+      <article class="coming">
+        <div class="content-wrapper">
+        <img src="assets/thumbnail-placeholder.png">
+        <h4>Result Regeneration</h4>
+        <div class="tag-editing"></div><div class="tag-coming"></div>
+        <p>Reviewing and regenerating an AI result.</p>
+        </div>
+        <a href="/patterns/pattern-???.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
+      </article>
+
+      <article class="coming">
+        <div class="content-wrapper">
+        <img src="assets/thumbnail-placeholder.png">
+        <h4>Partial Regeneration</h4>
+        <div class="tag-editing"></div><div class="tag-coming"></div>
+        <p>Focused regeneration of specific sections of an AI generated result.</p>
+        </div>
+        <a href="/patterns/pattern-???.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
       </article>
 
   </div>
+
+
+  <div id="insert-footer"></div>
 
 
 </body>
 
 <script>
   feather.replace()
+</script>
+
+<script>
+
+    $(document).ready(function (){
+    $( '#header').load("header.html");
+    $('#insert-footer').load("footer.html");
+    });
+
 </script>
 
 

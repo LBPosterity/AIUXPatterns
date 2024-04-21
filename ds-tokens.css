@@ -2,13 +2,13 @@
 {
   
   /* Transition */
-  --transition: 0.2s ease; 
-  --transition-slow: 0.4s ease; 
+  --transition: 0.3s ease; 
+  --transition-slow: 0.9s ease; 
   
   /* Colours */
-  --heading-color: var(--grey-800);
-  --body-color: var(--grey-700);
-  --body-light-color: var(--grey-500);
+  --heading-color: var(--purple-600);
+  --body-color: var(--purple-800);
+  --body-light-color: var(--purple-600);
   
   --white: white;
   --black: var(--grey-900);
@@ -76,6 +76,12 @@ h1, h2, h3, h4, h5
 body, p, label, ul, li, details, summary
 {
   color: var(--body-color);
+}
+
+ul
+{
+  column-count: 2;
+  column-gap: var(--size-4);
 }
 
 a

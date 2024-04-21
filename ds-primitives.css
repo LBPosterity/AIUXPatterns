@@ -28,7 +28,7 @@ hr
   /*-- Master variables -------*/
   
   --size-base: 0.8rem;
-  --text-base: 1.6rem; /* base text size */
+  --text-base: 1.7rem; /* base text size */
   --text-ratio: 1.18; /*ratio - heading to base*/
   --line-height-base: 1.6; 
   --space-after-base: 1.33ch;
@@ -62,11 +62,12 @@ hr
   /* Seed Colours ---------------------------------*/
   
   --grey-h: 200deg; --grey-s: 12%; --grey-l: 50%;
-  --green-h: 160deg; --green-s: 55%; --green-l: 50%;
+  --white-h: 0deg; --white-s: 0%; --white-l: 100%;
+  --green-h: 170deg; --green-s: 55%; --green-l: 50%;
   --blue-h: 200deg; --blue-s: 66%; --blue-l: 50%;
   --red-h: 350deg; --red-s: 50%; --red-l: 50%;
   --yellow-h: 60deg; --yellow-s: 50%; --yellow-l: 50%;
-  --orange-h: 35deg; --orange-s: 50%; --orange-l: 50%;
+  --orange-h: 12deg; --orange-s: 70%; --orange-l: 60%;
   --purple-h: 260deg; --purple-s: 50%; --purple-l: 50%;
   
   
@@ -159,6 +160,16 @@ hr
   --grey-op70: hsla(var(--grey-h) var(--grey-s) var(--grey-l) / 0.7);
   --grey-op80: hsla(var(--grey-h) var(--grey-s) var(--grey-l) / 0.8);
   --grey-op90: hsla(var(--grey-h) var(--grey-s) var(--grey-l) / 0.9);
+
+  --white-op10: hsla(var(--white-h) var(--white-s) var(--white-l) / 0.1);
+  --white-op20: hsla(var(--white-h) var(--white-s) var(--white-l) / 0.2);
+  --white-op30: hsla(var(--white-h) var(--white-s) var(--white-l) / 0.3);
+  --white-op40: hsla(var(--white-h) var(--white-s) var(--white-l) / 0.4);
+  --white-op50: hsla(var(--white-h) var(--white-s) var(--white-l) / 0.5);
+  --white-op60: hsla(var(--white-h) var(--white-s) var(--white-l) / 0.6);
+  --white-op70: hsla(var(--white-h) var(--white-s) var(--white-l) / 0.7);
+  --white-op80: hsla(var(--white-h) var(--white-s) var(--white-l) / 0.8);
+  --white-op90: hsla(var(--white-h) var(--white-s) var(--white-l) / 0.9);
   
   --green-50: hsl(var(--green-h) var(--green-s) calc(var(--green-l)*1.925));
   --green-100: hsl(var(--green-h) var(--green-s) calc(var(--green-l)*1.85));
@@ -315,8 +326,8 @@ hr
 {
   :root
   {
-  --text-base: 1.4rem;
-  --text-ratio: 1.14; /*ratio - heading to base*/
+  --text-base: 1.6rem;
+  --text-ratio: 1.12; /*ratio - heading to base*/
   }
 }
 
@@ -354,7 +365,6 @@ h1, h2, h3, h4, h5, h6
   margin-block-end: var(--space-after-heading);
   font-family: var(--family-heading);
   font-weight: var(--heading-weight);
-  color: var(--heading-color);
 }
 
 h1{font-size: var(--h1);}
