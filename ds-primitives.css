@@ -322,11 +322,11 @@ hr
 
 /*-- Typography Styles ---------------------------------*/
 
-@media screen and (max-width: 800px)
+@media screen and (max-width: 699px)
 {
   :root
   {
-  --text-base: 1.6rem;
+  --text-base: 1.4rem;
   --text-ratio: 1.12; /*ratio - heading to base*/
   }
 }

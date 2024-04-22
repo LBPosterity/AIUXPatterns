@@ -336,6 +336,13 @@ button[class*="btn-tertiary"]
   gap: var(--size-2);
 }
 
+        @media screen and (max-width: 699px){
+          .button-pair
+          {
+            flex-direction: column;
+          }
+        }
+
 
 
 .invert-theme
@@ -388,6 +395,7 @@ img.diagram
       border: 1px solid var(--orange-500);
       color: var(--orange-800);
       margin-block: var(--size-3);
+      display: none;
     }   
 }
 
@@ -414,6 +422,15 @@ img.diagram
   position: relative;
 }
 
+        @media screen and (max-width: 699px)
+        {
+          .intro-wrapper
+          {
+            min-height: 80vh;
+            margin-block: 0;
+          }
+        }
+
 
 .intro-wrapper
 {
@@ -437,7 +454,8 @@ img.diagram
 .intro-wrapper::before,
 .intro-wrapper::after
 {
-  transition: 6s;
+  transition: 4s;
+  pointer-events: none;
 }
 
 .intro-wrapper::before
@@ -449,17 +467,17 @@ img.diagram
   background: radial-gradient(#5D00D2 0%, transparent 60%);
   width: 50%;
   height: 66%;
-  opacity: 0.15;
+  opacity: 0.3;
   transform: rotate(33deg);
 }
 
 
-.intro-wrapper:hover::before
-{
-  left: 50%;
-  bottom: 50%;
-  width: 100%;
-}
+        .intro-wrapper:hover::before
+        {
+          left: 20%;
+          bottom: 40%;
+          width: 100%;
+        }
 
 
 .intro-wrapper::after
@@ -471,14 +489,15 @@ img.diagram
   background: radial-gradient(#8c2eff 0%, transparent 50%);
   width: 25%;
   height: 20%;
-  opacity: 0.1;
+  opacity: 0.2;
   transform: rotate(33deg);
+  transition-delay: 0.4s;
 }
 
         .intro-wrapper:hover::after
         {
-          left: 50%;
-          bottom: 50%;
+          left: 20%;
+          bottom: 40%;
           width: 50%;
         }
 
