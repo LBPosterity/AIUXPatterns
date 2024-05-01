@@ -22,7 +22,7 @@ html
   scroll-behavior: smooth;
   background-color: var(--purple-100);
   background-size: cover;
-  animation: bg-animation 5s linear 0s infinite alternate both;
+  animation: bg-animation 4.5s linear 0s infinite alternate both;
   position: relative;
   min-height: 100%;
 }
