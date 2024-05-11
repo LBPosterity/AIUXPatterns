@@ -70,6 +70,47 @@ ul
 }
 
 
+.faq-wrapper
+{
+  max-width: 70ch;
+  margin-inline: auto;
+}
+
+summary
+{
+  list-style: none;
+  position: relative;
+  font-weight: bold;
+}
+
+details[open] summary
+{
+  border-bottom: 1px solid var(--purple-200);
+}
+
+summary::marker
+{
+  display: none;
+}
+
+
+summary::after
+{
+  content: '⤸';
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: var(--transition-slow);
+  transform: rotate(-20deg);
+  font-size: var(--text-large);
+}
+
+details[open] summary::after
+{
+  transform: rotate(160deg);
+}
+
+
 
 /* Header ----------------------------- */
 
