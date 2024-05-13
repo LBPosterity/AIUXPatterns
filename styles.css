@@ -72,8 +72,13 @@ ul
 
 .faq-wrapper
 {
-  max-width: 70ch;
+  max-width: 80ch;
   margin-inline: auto;
+}
+
+details[open]
+{
+  margin-bottom: var(--size-8);
 }
 
 summary
@@ -81,11 +86,13 @@ summary
   list-style: none;
   position: relative;
   font-weight: bold;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
 }
 
 details[open] summary
 {
-  border-bottom: 1px solid var(--purple-200);
+  border-bottom: 1px solid var(--purple-400);
 }
 
 summary::marker
