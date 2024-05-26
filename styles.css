@@ -640,11 +640,7 @@ article.coming a
 }
 
 
-#patterns #footer
-{
-  display: none;
-}
-
+#patterns #footer,
 #page-patterns #patterns #footer
 {
   display: none;
@@ -716,7 +712,7 @@ div[class*="tag-"]
 
         div[class*="tag-editing"]:after
         {
-          content: 'Editing';
+          content: 'Result Editing';
         }
 
     div[class*="tag-coming"]
@@ -752,6 +748,19 @@ div[class*="tag-"]
                     grid-template-columns: repeat(1, 1fr);
                   }
                 }
+
+
+/* Pattern Page ------------------------------ */
+
+#page-pattern-listing .content-wrapper div[class*="tag-"]
+{
+  margin-bottom: var(--size-2);
+}
+
+#page-pattern-listing .content-wrapper h1
+{
+  margin-bottom: var(--size-6);
+}
 
 
 /* Footer ---------------------------- */
