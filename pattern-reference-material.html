@@ -6,7 +6,7 @@
   <meta name="keywords" content="HTML,CSS,XML,JavaScript">
   <meta name="author" content="Luke Bennis">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI UI Pattern - AI Results Partial Regeneration</title>
+  <title>AI UI Pattern - AI Prompt Reference Material</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
  
@@ -34,27 +34,24 @@
 
 
     <div class="tag-editing"></div>
-    <h1>Partial Result Regeneration</h1>
+    <h1>Prompt Reference Material</h1>
 
     <div class="col-3-wrapper">
 
       <div class="col">
         <h5>Overview</h5>
-        <p class="large">With AI capable of generating long multi paragrapg results, this pattern allows for granular editing contorl over specific selected text.</p>
+        <p class="large">Whilst it's access to a wide range of knowledge is one of AI's core strengths, sometimes it's more appropriate to have your results be scoped to a more restricted set of reference material. This pattern allows users to provides primary references for the AI to reference in it's response.</p>
       </div>
 
       <div class="col">
         <h5>User Archetype</h5>
-        <p>While intuitively this pattern may seem more suited to technically proficient users, it's broadly applicable because of how common place it is to review & edit text. Selecting only the third paragraph or the second half of a sentance is an intuitive action for most users.</p>
+        <p>All users will have an intuitive view of what material they'd like to the AI to focus on. However, as a general understanding of how AI's (LLM's) actually work grows, it will take some time before most users comprehend the difference between training data, publically accessible data & reference material. Consider your users understanding of these concepts to ensure they can utilise scoped reference material effectively.</p>
       </div>
 
       <div class="col">
         <h5>Considerations</h5>
-        <p>The key consideration is how granular do you think your users need to edit their results. It's is selection down to the individul letter, word or whole paragraph.
-          <br><br>
-          For example limiting selection resolution to whole paragraphs is a balanced trade off between a simple user experience & a meaningful amount of content for the AI to regenerate a meaningful alternative.
-          <br><br>
-          Consider also if the regeneration action would be easier for users if contextually relevant pre canned prompts were provided.</p>
+        <p>The key variables for this pattern are simply how many, how large & what file types is the reference data you allow your users to add. These choices are highly contextual to your users use case. You may want to limit it to only a few references or allow for a complex multi format reference set to be authored.</p>
+        <p></p>
       </div>
 
   </div>
