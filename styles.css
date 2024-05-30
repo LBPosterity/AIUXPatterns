@@ -595,7 +595,19 @@ img.diagram
 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: var(--size-8);
+  grid-gap: var(--size-6);
+
+  @media screen and (max-width: 1200px){
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+      @media screen and (max-width: 900px){
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+          @media screen and (max-width: 600px){
+            grid-template-columns: repeat(1, 1fr);
+          }
 
     article
     {
@@ -704,7 +716,18 @@ div[class*="tag-"]
           content: 'Configuration';
         }
 
-    div[class*="tag-editing"]
+    div[class*="tag-results"]
+    {
+      --tag-bg: var(--blue-550);
+      --tag-text: var(--blue-100);
+    }
+
+        div[class*="tag-results"]:after
+        {
+          content: 'Result Display';
+        }
+
+        div[class*="tag-editing"]
     {
       --tag-bg: var(--green-550);
       --tag-text: var(--green-100);
