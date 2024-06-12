@@ -37,6 +37,7 @@ html::before
   height: 100%;
   background: radial-gradient(circle at 0% 100%, var(--purple-50) 20%, transparent 90%);
   z-index: -1;
+  opacity: 0.66;
 }
 
 .no-scroll html,
@@ -192,6 +193,8 @@ iframe
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: black;
+  outline: 2px solid white;
+  outline-offset: -2px;
 }
 
 .iframe-wrapper
@@ -475,7 +478,6 @@ img.diagram
         {
           .intro-wrapper
           {
-            min-height: 80vh;
             margin-block: 0;
           }
         }
@@ -595,19 +597,25 @@ img.diagram
 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: var(--size-6);
+  grid-gap: var(--size-8);
+  margin-inline: -7vw;
 
-  @media screen and (max-width: 1200px){
-    grid-template-columns: repeat(3, 1fr);
+  @media screen and (max-width: 1600px){
+    margin-inline: -3vw;
   }
 
-      @media screen and (max-width: 900px){
-        grid-template-columns: repeat(2, 1fr);
+      @media screen and (max-width: 1200px){
+        grid-template-columns: repeat(3, 1fr);
+        margin-inline: 0;
       }
 
-          @media screen and (max-width: 600px){
-            grid-template-columns: repeat(1, 1fr);
+          @media screen and (max-width: 900px){
+            grid-template-columns: repeat(2, 1fr);
           }
+
+              @media screen and (max-width: 600px){
+                grid-template-columns: repeat(1, 1fr);
+              }
 
     article
     {
@@ -629,6 +637,7 @@ img.diagram
           position: absolute;
           top: var(--size-1);
           left: var(--size-1);
+          transition: 1.2s;
         }
 
         div[class*="tag-coming"]
@@ -638,6 +647,12 @@ img.diagram
         }
       
   }
+}
+
+article:hover div[class*="tag-"]
+{
+  top: calc(var(--size-1) *-1);
+  transition: var(--transition-slow);
 }
 
 
@@ -669,16 +684,18 @@ article.coming a
 
 .patterns-wrapper article img
 {
-  border: 1px solid var(--white-op60);
+  border: 0px solid transparent;
   border-radius: var(--radius-lg);
   outline: 0px solid transparent;
+  transition: 1.2s;
 }
 
-.patterns-wrapper article:hover img
-{
-  border: 0px solid transparent;
-  outline: 8px solid var(--white-op60);
-}
+    .patterns-wrapper article:hover img
+    {
+      border: 1px solid var(--grey-op10);
+      outline: 8px solid var(--white-op50);
+      transition: var(--transition);
+    }
 
 
 

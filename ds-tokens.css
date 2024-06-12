@@ -63,7 +63,7 @@ html
 .invert-theme
 {
   --heading-color: var(--white);
-  --body-color: var(--white);
+  --body-color: var(--white-op80);
 }
 
 /* Typography ------------------------------- */
