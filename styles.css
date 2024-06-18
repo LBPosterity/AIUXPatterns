@@ -24,13 +24,12 @@ html
   background-size: cover;
   animation: bg-animation 4.5s linear 0s infinite alternate both;
   position: relative;
-  min-height: 100%;
 }
 
 html::before
 {
   position: fixed;
-  content: '';
+  content: ;
   top: 0;
   left: 0;
   width: 100%;
@@ -51,7 +50,6 @@ body
   font-family: sans-serif;
   margin-inline: auto;
   width: var(--site-width);
-  min-height: 100%;
 }
 
 @keyframes bg-animation {
@@ -459,7 +457,7 @@ img.diagram
 
 .intro-wrapper
 {
-  min-height: 66vh;
+  min-height: 75vh;
   border-radius: var(--radius-lg);
   background: var(--purple-900);
   background: radial-gradient(circle at 0% 120%, #000013 10%, #001C3E 80%, #5D00D2 80%, #002344 100%);
