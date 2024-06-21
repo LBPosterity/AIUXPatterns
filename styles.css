@@ -22,7 +22,7 @@ html
   scroll-behavior: smooth;
   background-color: var(--purple-100);
   background-size: cover;
-  animation: bg-animation 4.5s linear 0s infinite alternate both;
+  animation: bg-animation 9s ease-in-out 0s infinite alternate both;
   position: relative;
 }
 
@@ -850,6 +850,7 @@ div[class*="tag-"]
 
 
 /* Why Page ------------------------------ */
+
 #page-why
 {
   scroll-snap-type: y mandatory;
@@ -857,6 +858,53 @@ div[class*="tag-"]
 
 .story-section
 {
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block: 0;
+  min-height: 60vh;
   scroll-snap-align: start;
+  position: relative;
+  text-align: center;
+}
+
+.story-section p.large
+{
+  max-width: 50ch;
+}
+
+.story-section p
+{
+  max-width: 55ch;
+}
+
+.story-section p.small
+{
+  max-width: 55ch;
+}
+
+.story-section::after
+{
+  content: '⇣';
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 15px);
+  font-size: var(--size-4);
+}
+
+.pattern-example
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--size-4);
+  margin-block: var(--size-4);
+}
+
+.pattern-example .example
+{
+  text-align: center;
+  min-width: 350px;
 }
