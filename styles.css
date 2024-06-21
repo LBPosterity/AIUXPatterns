@@ -845,3 +845,18 @@ div[class*="tag-"]
       width: 38vw;
     }
 }
+
+
+
+
+/* Why Page ------------------------------ */
+#page-why
+{
+  scroll-snap-type: y mandatory;
+}
+
+.story-section
+{
+  min-height: 100vh;
+  scroll-snap-align: start;
+}
