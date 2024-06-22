@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="AI UI Patterns" content="">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="Luke Bennis">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI UI Patterns</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+  <link rel="stylesheet" type="text/css" href="ds-primitives.css">
+  <link rel="stylesheet" type="text/css" href="ds-tokens.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+
+</head>
+
+    
+<body id="page-about">
+  <div id="header"></div>
+
+  <section class="">
+    
+  </section>
+
+  <img src="assets/ui-hero.png" class="about-hero">
+
+  <div class="page-intro">
+
+    <h1>How to use the UI pattern references</h1>
+    <p class="large">These simplified UI examples are meant as a clarifying reference as you & your team evaluate common or new design patterns for AI interfaces.</p>
+    <p>Each pattern is not a complete workflow but is an abstracted example of a particular user experience design approach that could be adopted & combined with others to create an optimised AI experience for users.</p>
+
+  </div>
+
+
+  <div class="col-3-wrapper col-highlight">
+    
+    <div>
+      <h5>Step 1</h5>
+      <p class="">Have a clear goal for what success looks like for your design. Define the workflow & it's requirements.</p>
+    </div>
+    <div>
+      <h5>Step 2</h5>
+      <p class="">Review the patterns to see which one best fits your use case & user type.</p>
+    </div>
+    <div>
+      <h5>Step 3</h5>
+      <p class="">Use this reference, along with re world examples, to align on the approach for your bespoke design.</p>
+    </div>
+
+  </div>
+
+
+  <section class="col-2-wrapper">
+
+    <div>
+      <h2>How LLM's are different</h2>
+      <p>The majority of software utilise the common logic <strong>If > Then</strong> statements which are strung together to achive complex tasks. These allow us to code business logic into our products for reliable outcomes.</p>
+      <p>But...</p>
+      <p>LLM's (AI) are different, the natural language models aren't hard coded, they're more like a magical black box.</p>
+      <p>Although extremely powerful, the answers these AI models provide aren't always 100% accurate. The possibiliy of hallucinations (or lies) mean the AI output needs to be reviewed & interpreted by someone.</p> 
+      <p>This will change as they become more reliable, but this is the key different when crafting AI user experiences.</p>
+    </div>
+    <div>
+      <img src="assets/ai-difference.png" class="diagram">
+    </div>
+
+
+  </section>
+
+  <section>
+
+      <div class="col-2-wrapper">
+
+        <div>
+          <h1>Prompt abstraction types</h1>
+          <p class="large">The input for AI models are "simple" text prompt. While writing some text is easy enough, emedding a prompt with an effective amount of detail, content, specificity & direction is a skill. A skill the majority of users either are not capable of or do not have the time to author.</p>
+        </div>
+
+        <div>
+          <p>Like all user intefaces, we're abstracting a complex process or input to make it more intuitive & usable for people.</p>
+          <p>There 4 broad categories of rompt abstraction that potentially wrrant a specific UI. These types are:
+            <ul>
+              <li><strong>Direct Prompt</strong><br>
+              Users input text is directly fed to the AI model.</li>
+              <li><strong>Supplemented Prompt</strong><br>
+              The user prompt is embedded into existing prompt perameters.</li>
+              <li><strong>Prompt Variables</strong><br>
+              User selections influence variables in existing prompt peramters.</li>
+              <li><strong>Variable Composition</strong><br>
+              Larger prompt sections are conditionally included or omitted.</li>
+            </ul>
+          </p>
+        </div>
+
+
+    </div>
+
+  <div class="iframe-wrapper"><iframe  
+    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FzZsnp1IG505BXk5qFua0Th%2FAI-Prompt-UI-Patterns%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D425-7324%26viewport%3D9847%252C-506%252C0.64%26t%3D2NCWbNXs59o8wbtt-1%26scaling%3Dmin-zoom%26mode%3Ddesign&scaling=scale-down-width&hide-ui=1" 
+    allowfullscreen>
+  </iframe></div>
+  
+</section>
+
+<section class="faq-wrapper">
+
+  <details>
+    <summary><h5>How do I use this guide?</h5></summary>
+    <p class="large">Like all user interface patterns each one is optimised for a particular context or user type. It's important to have your individual requirements defined so you them to them to then assess what which pattern may work best for your product.</p>
+  </details>
+
+  <details>
+    <summary><h5>Are these designs complete?</h5></summary>
+    <p class="large">No, these are simplified mockups to simply illustrate a UI pattern and how it's core elements interact.</p> 
+
+    <p class="large">The constituent elements could be presented in a sidebar area, inline with other UI elements, in a modal or however your product needs to present them to best support your users.</p>
+  </details>
+
+  <details>
+    <summary><h5>Can I have access to the Figma files?</h5></summary>
+    <p class="large">As these UI examples are meant to present the key UI elements as a conversation reference the particular layout or atomic elements aren't meant to be used directly. However, sharing is caring, email me at luke@lukebennis.com and I can share them with you.</p>
+  </details>
+
+  <details>
+    <summary><h5>Does this help me with my AI strategy?</h5></summary>
+    <p class="large">No, these patterns represent options for interface designs once you know you're implementing an AI feature & understand you're project and user requirements.</p> 
+  </details>
+
+</section>
+
+
+  <div id="insert-footer"></div>
+
+</body>
+
+
+
+<script type="text/javascript" src="scripts-ui.js"></script>
+
+
+
+
+<script>
+
+  $(document).ready(function (){
+    $( '#header').load("header.html");
+    $('#insert-footer').load("footer.html");
+  });
+
+
+</script>
+
+<script>
+  feather.replace()
+</script>
+
+
+
+
+
+</html>
+
+
+

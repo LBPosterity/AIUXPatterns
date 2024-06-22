@@ -326,8 +326,7 @@ hr
 {
   :root
   {
-  --text-base: 1.4rem;
-  --text-ratio: 1.12; /*ratio - heading to base*/
+  --text-ratio: 1.16; /*ratio - heading to base*/
   }
 }
 
@@ -360,7 +359,7 @@ p.large
 
 h1, h2, h3, h4, h5, h6
 {
-  line-height: calc(var(--line-height-base)*0.8);  
+  line-height: var(--line-height-base);  
   margin-block-start: 0 !important;
   margin-block-end: var(--space-after-heading);
   font-family: var(--family-heading);

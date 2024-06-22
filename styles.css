@@ -274,7 +274,7 @@ section
 
 button, button[class*="btn-"]
 {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -869,29 +869,70 @@ div[class*="tag-"]
   text-align: center;
 }
 
+        @media screen and (max-width: 800px){
+          .story-section
+          {
+            min-height: 80vh;
+            padding-inline: var(--size-2);
+          }
+        }
+
+.story-section h5
+{
+  max-width: 37ch;
+  font-weight: 300;
+}
+
+      .story-section h5 strong
+      {
+        font-weight: bold;
+      }
+
 .story-section p.large
 {
-  max-width: 50ch;
+  max-width: 40ch;
 }
 
 .story-section p
 {
-  max-width: 55ch;
+  max-width: 40ch;
 }
 
 .story-section p.small
 {
-  max-width: 55ch;
+  max-width: 40ch;
 }
 
 .story-section::after
 {
   content: '⇣';
   position: absolute;
+  width: var(--size-5);
   bottom: 0;
   left: calc(50% - 15px);
-  font-size: var(--size-4);
+  font-size: var(--size-3);
+  border-radius: 999px;
+  animation: scroll-highlight 3s linear infinite;
 }
+
+@keyframes scroll-highlight {
+
+  0% {
+    outline: 0px solid var(--white);
+    outline-offset: var(--size-0-5);
+  }
+  100% {
+    outline: var(--size-1) solid transparent;
+    outline-offset: var(--size-3);
+  }
+  
+}
+
+        .story-section.no-after::after
+        {
+          content: '';
+          animation: none;
+        }
 
 .pattern-example
 {
@@ -899,12 +940,147 @@ div[class*="tag-"]
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: var(--size-4);
+  gap: var(--size-5);
   margin-block: var(--size-4);
 }
 
+        @media screen and (max-width: 800px){
+          .pattern-example
+          {
+            flex-direction: column;
+          }
+        }
+
 .pattern-example .example
 {
-  text-align: center;
-  min-width: 350px;
+
+}
+
+
+.if-then-example
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--size-1);
+  margin-block: var(--size-3) var(--size-5);
+}
+
+
+
+.dropdown-example
+{
+  position: relative;
+}
+
+.dropdown-wrapper
+{
+  border-radius: var(--radius-md);
+  background: var(--white);
+  padding: var(--size-1) var(--size-2);
+  color: var(--grey-500);
+  font-style: italic;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.dropdown-wrapper::after
+{
+  content: '🡣';
+  margin-left: var(--size-3);
+}
+
+.active .dropdown-wrapper
+{
+  border: 1px solid var(--purple-400);
+}
+
+
+.active .dropdown-wrapper::after
+{
+  content: '🡡';
+  color: var(--purple-600);
+}
+
+        .list-wrapper
+        {
+          border-radius: var(--radius-md);
+          background: var(--white);
+          padding: var(--size-1);
+          opacity: 0;
+          margin-top: var(--size-2);
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          z-index: 42;
+          pointer-events: none;
+        }
+
+        .active .list-wrapper
+        {
+          opacity: 1;
+          margin-top: var(--size-0-5);
+        }
+
+        .list-wrapper .option
+        {
+          background: var(--white);
+          border-radius: var(--radius-md);
+          padding: var(--size-1); var(--size-2);
+          text-align: left;
+        }
+
+.dropdown-ex-b .list-wrapper
+{
+  opacity: 0;
+  top: 28px;
+  bottom: auto;
+  margin-top: 0;
+  opacity: 0;
+}
+
+.dropdown-ex-b.active .list-wrapper 
+{
+  opacity: 1 ;
+  background: transparent;
+}
+
+.dropdown-ex-b .list-wrapper .option
+{
+  position: absolute;
+  bottom: auto;
+  top: 0px;
+  right: 0px;
+  transform: rotate(0deg);
+}
+
+.dropdown-ex-b.active .list-wrapper .option:nth-child(1)
+{
+  top: -66px;
+  right: 30px;
+  transform: rotate(-30deg);
+}
+
+.dropdown-ex-b.active .list-wrapper .option:nth-child(2)
+{
+  top: -40px;
+  right: -55px;
+  transform: rotate(-25deg);
+}
+
+.dropdown-ex-b.active .list-wrapper .option:nth-child(3)
+{
+  top: 35px;
+  right: -77px;
+  transform: rotate(15deg);
+}
+
+.dropdown-ex-b.active .list-wrapper .option:nth-child(4)
+{
+  top: 66px;
+  right: 15px;
+  transform: rotate(30deg);
 }
