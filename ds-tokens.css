@@ -88,7 +88,7 @@ a
 {
   text-decoration: none;
   color: var(--link-color);
-  text-decoration: underline 1px solid var(--link-color);
+  text-decoration: none;
   text-underline-offset: 3px;
   cursor: pointer;
 }
