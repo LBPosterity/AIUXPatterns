@@ -736,7 +736,7 @@ div[class*="tag-"]
           content: 'Result Display';
         }
 
-        div[class*="tag-editing"]
+    div[class*="tag-editing"]
     {
       --tag-bg: var(--green-550);
       --tag-text: var(--green-100);
@@ -747,10 +747,21 @@ div[class*="tag-"]
           content: 'Result Editing';
         }
 
+    div[class*="tag-agent"]
+    {
+      --tag-bg: var(--purple-700);
+      --tag-text: var(--purple-100);
+    }
+
+        div[class*="tag-agent"]:after
+        {
+          content: 'AI Agent';
+        }
+
     div[class*="tag-coming"]
     {
       --tag-bg: var(--purple-900);
-      --tag-text: var(--grey-300);
+      --tag-text: var(--grey-500);
     }
 
         div[class*="tag-coming"]:after
