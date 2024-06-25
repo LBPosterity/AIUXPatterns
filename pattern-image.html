@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="AI UX Patterns" content="">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="Luke Bennis">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI UI Pattern - Image Input</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+  <link rel="stylesheet" type="text/css" href="ds-primitives.css">
+  <link rel="stylesheet" type="text/css" href="ds-tokens.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+</head>
+
+    
+<body id="page-pattern-listing">
+  <div id="header"></div>
+
+  <div class="iframe-wrapper"><iframe  
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FzZsnp1IG505BXk5qFua0Th%2FAI-UX-Patterns%3Fpage-id%3D0%253A1%26node-id%3D823-4763%26viewport%3D789%252C617%252C0.39%26t%3De9NUb2HPlD1GpnfW-1%26scaling%3Dmin-zoom%26mode%3Ddesign&hide-ui=1&scaling=scale-down-width" 
+            allowfullscreen>
+    </iframe></div>
+
+
+
+
+  <div class="content-wrapper">
+
+
+    <div class="tag-author"></div>
+    <h1>Image Input</h1>
+
+    <div class="col-3-wrapper">
+
+      <div class="col">
+        <h5>Overview</h5>
+        <p class="large">As IA becomes multi modal, accompanying text prompts with images will be a common input to expose the insights contained in the image.
+          <br><br>
+        Unless a model is pre set for an image interpretation task, some text prompt will usually need to direct the AI's interpretation of the image asset.
+        </p>
+      </div>
+
+      <div class="col">
+        <h5>User Archetype</h5>
+        <p>Users no matter their technical ability are mostly familiar with images & visual files in the age of the internet. Couple this with how visual people are & how rich image formats are, there is a large amount of data contained in our existing images.</p>
+        <p>While the level of detail and sophistication will vary, the ability to attach & query an image will be a ubiquitous for al user types.</p>
+      </div>
+
+      <div class="col">
+        <h5>Considerations</h5>
+        <p>Anytime we provide a file upload we want to consider core metrics of size & resolution.</p>
+        <p>In terms of resolution, especailly when providing the image for analysis, a minimum resolution should likely be set to set some threshold for a useful image resource. This goes hand in hand with file types, where formats like .gif aren't general capable of high resolution & therefore aren't as useful as JPG or PNG file types.</p>
+        <p>Aside from general file upload considerations your particular design context may need more sophisticated targeting for the image resource. Do your users need to identify a focal point or specified area within the image for the AI.</p>
+      </div>
+
+  </div>
+
+  </div>
+
+  <div id="footer"></div>
+
+  <script type="text/javascript" src="scripts-ui.js"></script>
+
+
+  <script>
+    feather.replace()
+  </script>
+  
+  <script>
+  
+    $(document).ready(function (){
+      $( '#header').load("header.html");
+      $( '#footer').load("footer.html");
+    });
+  
+  
+  </script>
+
+</body>
+
+</html>
+
+
+

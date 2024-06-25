@@ -677,7 +677,7 @@ article.coming a
 .patterns-wrapper article img
 {
   border: 0px solid transparent;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   outline: 0px solid transparent;
   transition: 1.2s;
 }
