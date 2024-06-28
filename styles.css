@@ -55,11 +55,11 @@ body
 @keyframes bg-animation {
     0%
     {
-      background-image: url('assets/bg-a.png');
+      background-image: url('./assets/bg-a.png');
     } 
     100%
     {
-      background-image: url('assets/bg-b.png');
+      background-image: url('./assets/bg-b.png');
     } 
 }
 
