@@ -142,7 +142,6 @@ details[open] summary::after
 }
 
 
-
 nav
 {
   display: flex;
@@ -156,6 +155,11 @@ nav
 nav button
 {
   backdrop-filter: blur(8px);
+}
+
+#mobile-btn
+{
+  display: none;
 }
 
 @media screen and (max-width: 699px){
@@ -176,7 +180,68 @@ nav button
     font-size: 1.4rem;
   }
 
+  #mobile-btn
+  {
+    display: inline-flex;
+  }
+
+  .menu-list
+  {
+    opacity: 0;
+    top: 7rem;
+    right: 6vw;
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+    transition: 0s;
+  }
+
+  nav svg.feather-x, 
+  nav svg.feather-menu
+  {
+    transition: var(--transition-slow);
+  }
+  
+  nav svg.feather-x
+  {
+    display: none;
+  }
+
+  nav.active svg.feather-menu
+  {
+    display: none;
+    border: 1px solid red;
+  }
+
+  nav.active svg.feather-x
+  {
+    display: block;
+  }
+
+  nav.active .menu-list
+  {
+    opacity: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--size-2);
+    width: 86.5vw;
+    height: auto;
+    background: var(--white);
+    padding: var(--size-4);
+    border-radius: var(--radius-md);
+    z-index: 42;
+    transition: var(--transition-slow);
+  }
+
 }
+
+
+
+
+
+
 
 
 /* iFrame Styles ----------------------------- */

@@ -1,12 +1,21 @@
 <nav>
-  <div>
+  <div class="logo-wrapper">
     <a href="index.html"><img src="./assets/aiui-logo.png" id="logo"></a>
   </div>
   <div class="menu-wrapper">
-    <a href="patterns.html"><button class="btn-tertiary">Patterns</button></a>
-    <a href="why.html"><button class="btn-tertiary">Why</button></a>
-    <a href="about.html"><button class="btn-tertiary">About</button></a>
-    <a href="more.html"><button class="btn-tertiary">More</button></a>
+
+    <a href="#" id="mobile-btn"><button class="btn-tertiary">
+      <i data-feather="menu" class="menu"></i>
+      <i data-feather="x" class="close"></i>
+    </button></a>
+
+    <div class="menu-list">
+      <a href="patterns.html"><button class="btn-tertiary">Patterns</button></a>
+      <a href="why.html"><button class="btn-tertiary">Why</button></a>
+      <a href="about.html"><button class="btn-tertiary">About</button></a>
+      <a href="more.html"><button class="btn-tertiary">More</button></a>
+    </div>
+
   </div>
 </nav>
 
@@ -32,6 +41,10 @@
 
     $("#notify-close").click(function(){
     $(".notification-mobile").addClass("hide");
+    });
+
+    $("#mobile-btn").click(function(){
+    $("nav").toggleClass("active");
     });
 
   });
