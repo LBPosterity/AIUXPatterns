@@ -797,7 +797,7 @@ article.coming a
     .patterns-wrapper article:hover img
     {
       border: 1px solid var(--grey-op10);
-      outline: 8px solid var(--white-op50);
+      outline: 6px solid var(--white-op40);
       transition: var(--transition);
     }
 
