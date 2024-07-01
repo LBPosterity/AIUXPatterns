@@ -762,7 +762,7 @@ article:hover div[class*="tag-"]
 
 article.coming button
 {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 article.coming a
