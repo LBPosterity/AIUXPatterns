@@ -681,7 +681,7 @@ img.diagram
 @media screen and (min-width: 1000px){
   .page-intro
   {
-    max-width: 50%;
+    max-width: 40%;
   }
 }
 
@@ -707,7 +707,7 @@ img.diagram
 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: var(--size-8);
+  grid-gap: var(--size-6);
 
       @media screen and (max-width: 1200px){
         grid-template-columns: repeat(3, 1fr);
@@ -873,7 +873,7 @@ div[class*="tag-"]
     div[class*="tag-coming"]
     {
       --tag-bg: var(--purple-900);
-      --tag-text: var(--grey-500);
+      --tag-text: var(--grey-400);
     }
 
         div[class*="tag-coming"]:after
