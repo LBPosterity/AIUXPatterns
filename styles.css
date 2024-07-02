@@ -566,7 +566,7 @@ img.diagram
 
 .intro-wrapper
 {
-  min-height: 75vh;
+  min-height: 70vh;
   border-radius: var(--radius-lg);
   background: var(--purple-900);
   background: radial-gradient(circle at 0% 120%, #000013 10%, #001C3E 80%, #5D00D2 80%, #002344 100%);
@@ -944,35 +944,6 @@ div[class*="tag-"]
 
 
 /* Page - About --------------------------- */
-
-.about-hero
-{
-  width: 85%;
-  margin-inline: auto;
-}
-
-@media screen and (min-width: 1400px){
-  .about-hero
-  {
-    top: 1vw !important;
-    right: -2vw !important;
-  }
-}
-
-
-@media screen and (min-width: 1000px){
-    .about-hero
-    {
-      position: absolute;
-      top: 12vw;
-      right: -5vw;
-      transform: rotate(16deg);
-      z-index: -1;
-      width: 38vw;
-    }
-}
-
-
 
 
 /* Why Page ------------------------------ */

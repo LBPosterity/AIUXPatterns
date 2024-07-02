@@ -66,6 +66,8 @@ html
   --body-color: var(--white-op80);
 }
 
+
+
 /* Typography ------------------------------- */
 
 h1, h2, h3, h4, h5 
@@ -78,11 +80,23 @@ body, p, label, ul, li, details, summary
   color: var(--body-color);
 }
 
-ul
-{
-  column-count: 2;
-  column-gap: var(--size-4);
-}
+        @media screen and (max-width: 1280px){
+          .col-2-wrapper ul
+          {
+            column-count: 1;
+          }
+          
+        }
+
+
+        @media screen and (min-width: 699px){
+          ul
+          {
+            column-count: 2;
+            column-gap: var(--size-4);
+          }
+        }
+
 
 a
 {
