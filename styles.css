@@ -102,18 +102,18 @@ summary::marker
 
 summary::after
 {
-  content: '⤸';
+  content: '⇣';
   position: absolute;
   top: 0;
   right: 0;
   transition: var(--transition-slow);
-  transform: rotate(-20deg);
+  transform: rotate(0deg);
   font-size: var(--text-large);
 }
 
 details[open] summary::after
 {
-  transform: rotate(160deg);
+  transform: rotate(540deg);
 }
 
 
@@ -174,7 +174,7 @@ nav button
 
   #logo
   {
-    width: 6rem;
+    width: 7rem;
   }
 
   .menu-wrapper
@@ -202,6 +202,17 @@ nav button
     width: 0px;
     overflow: hidden;
     transition: 0s;
+  }
+
+  .menu-list button
+  {
+    font-size: var(--text-large);
+    width: 100%;
+  }
+
+  .menu-list a
+  {
+    width: 100%;
   }
 
   nav svg.feather-x, 
@@ -580,6 +591,7 @@ img.diagram
   padding: var(--size-6);
   text-align: center;
   position: relative;
+  overflow: hidden;
 }
 
         @media screen and (max-width: 699px)
@@ -602,7 +614,7 @@ img.diagram
 
   p
   {
-    max-width: 50ch;
+    max-width: 60ch;
   }
 
   button
