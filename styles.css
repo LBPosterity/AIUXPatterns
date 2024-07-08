@@ -917,6 +917,30 @@ div[class*="tag-"]
                 }
 
 
+
+.patterns-wrapper.compact
+{
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.patterns-wrapper.compact article p
+{
+  display: none;
+}
+
+.patterns-wrapper.compact article h4
+{
+  font-size: calc(var(--h6) * var(--text-ratio));
+}
+
+
+
+.patterns-wrapper.large
+{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
 /* Pattern Page ------------------------------ */
 
 #page-pattern-listing .content-wrapper div[class*="tag-"]

@@ -28,6 +28,12 @@
   <div class="page-intro">
     <h1>AI UX Patterns</h1>
     <p class="large">Abstracted design solutions to review the core elements & interactions in each pattern. To reflect on the best-practice fit for your context when designing in the new AI paradigm.</p>
+  
+  <div class="toggle-set">
+    <button class="btn-compact">Compact</button>
+    <button class="btn-regular">Regular</button>
+    <button class="btn-large">Large</button>
+  </div>
   </div>
 
 
@@ -312,6 +318,31 @@
     $(document).ready(function (){
     $( '#header').load("header.html");
     $('#insert-footer').load("footer.html");
+    });
+
+    $(document).ready(function (){
+      $(".toggle-set button").click(function(){
+      $(".toggle-set button").removeClass("active");
+      $(this).addClass("active");
+      });
+    });
+
+    $(document).ready(function (){
+      $(".toggle-set .btn-compact").click(function(){
+      $(".patterns-wrapper").addClass("compact").removeClass("large");
+      });
+    });
+
+    $(document).ready(function (){
+      $(".toggle-set .btn-regular").click(function(){
+      $(".patterns-wrapper").removeClass("compact large");
+      });
+    });
+
+    $(document).ready(function (){
+      $(".toggle-set .btn-large").click(function(){
+      $(".patterns-wrapper").addClass("large").removeClass("compact");
+      });
     });
 
 </script>
