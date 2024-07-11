@@ -722,15 +722,15 @@ img.diagram
   grid-gap: var(--size-6);
 
       @media screen and (max-width: 1200px){
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr) !important;
       }
 
           @media screen and (max-width: 900px){
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr) !important;
           }
 
               @media screen and (max-width: 600px){
-                grid-template-columns: repeat(1, 1fr);
+                grid-template-columns: repeat(1, 1fr) !important;
               }
 
     article
@@ -916,22 +916,72 @@ div[class*="tag-"]
                   }
                 }
 
+/* Layout Toggles */
 
-
-.patterns-wrapper.compact
-{
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.patterns-wrapper.compact article p
+.filter-bar
 {
   display: none;
 }
 
-.patterns-wrapper.compact article h4
+    @media  screen and (min-width:1200px) {
+      .filter-bar
+      {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--size-2);
+        border-bottom: 1px solid var(--grey-op20);
+        padding-bottom: var(--size-2);
+        margin-bottom: var(--size-3);
+      }
+    }
+
+.toggle-set button
 {
-  font-size: calc(var(--h6) * var(--text-ratio));
+  padding-inline: var(--size-1);
+  min-width: var(--size-5);
 }
+
+.toggle-set button.active
+{
+  border-color: var(--purple-300);
+  padding-inline: var(--size-4);
+}
+
+.toggle-set button:hover
+{
+  background: var(--white);
+}
+
+.patterns-wrapper.compact
+{
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--size-4);
+}
+
+        .patterns-wrapper.compact article button
+        {
+          border: none;
+          background: none;
+          box-shadow: none;
+          padding: 0;
+        }
+
+        .patterns-wrapper.compact article button svg
+        {
+          stroke: currentColor;
+        }
+
+        .patterns-wrapper.compact article p
+        {
+          font-size: 0;
+        }
+
+        .patterns-wrapper.compact article h4
+        {
+          font-size: calc(var(--h6) * var(--text-ratio));
+        }
 
 
 
