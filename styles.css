@@ -368,7 +368,8 @@ section
               }
 
 
-.col-highlight div
+.col-highlight div,
+.highlight
 {
   border: 1px solid var(--white-op90);
   border-radius: var(--radius-md);
@@ -946,7 +947,7 @@ div[class*="tag-"]
 .toggle-set button.active
 {
   border-color: var(--purple-300);
-  padding-inline: var(--size-4);
+  padding-inline: var(--size-3);
 }
 
 .toggle-set button:hover
