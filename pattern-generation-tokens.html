@@ -6,7 +6,7 @@
   <meta name="keywords" content="HTML,CSS,XML,JavaScript">
   <meta name="author" content="Luke Bennis">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI UX Pattern - AI Thread History</title>
+  <title>AI UX Pattern - AI Generation Tokens</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
  
@@ -24,7 +24,7 @@
   <div id="header"></div>
 
   <div class="iframe-wrapper"><iframe  
-            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FzZsnp1IG505BXk5qFua0Th%2FAI-UX-Patterns%3Fpage-id%3D0%253A1%26node-id%3D1415-9430%26viewport%3D789%252C617%252C0.39%26t%3DjM6AwfgCDYJJMxtu-1%26scaling%3Dmin-zoom%26mode%3Ddesign&hide-ui=1&scaling=scale-down-width" 
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FzZsnp1IG505BXk5qFua0Th%2FAI-UX-Patterns%3Fpage-id%3D0%253A1%26node-id%3D1591-10269%26viewport%3D-6382%252C514%252C0.33%26t%3D6syyjuLAa15Ol2MF-1%26scaling%3Dmin-zoom%26mode%3Ddesign&hide-ui=1&scaling=scale-down-width" 
             allowfullscreen>
     </iframe></div>
 
@@ -33,31 +33,35 @@
 
 
     <div class="tag-settings"></div>
-    <h1>Threading History</h1>
+    <h1>Generation Tokens</h1>
 
     <div class="col-3-wrapper">
 
       <div class="col">
         <h5>Overview</h5>
-        <p class="large">A widely expected account management feature, the thread history is not only convenient but even more relevant for AI workflows.
-          <br><br>
-          Being that AI has a such a multifaceted skill set, our use of it will also broaden Users will benefit from a clear thread history as they switch between various topics. 
-        </p>
+        <p class="large">AI generations cost compute which is not free so for products to employ the premium model tokens are a way to control a users allocation when each generation costs a different amount.</p>
       </div>
 
       <div class="col">
         <h5>User Archetype</h5>
-        <p>Skewed toward more frequent or advanced users, this pattern requires a user to have enough usage to warrant the using the thread history feature.
-        <br><br>
-        However, if not tucked away an easily accessible history can allow novice users to understand a single focus per thread is optimal & that you cn return to expand on a thread at any time.  
+        <p>Primarily employed for non paying users to preview a product with limitations, this means that clearly communicating the allocation & how/when it's spent is important for a positive user experience.
+          <br><br>
+          A potentially useful pattern for advanced users in a context where indicating the compute cost was relevant. These users wouldn't have an allocation but a cost per prompt could be useful. 
         </p>
       </div>
 
       <div class="col">
         <h5>Considerations</h5>
-        <p>Thread histories can be segmented easily if a "new thread" button is provided but consider if some simple heuristics can help organise your users thoughts. Perhaps a threads history is separated on each new session to align with their natural return to the product.
+        <p>The key elements in not making tokens frustrating for users is making it clear what allocation users have available, when & how they're spent & when they replenish.
           <br><br>
-        Another key consideration is how long the history is maintained, when providing this to free users, a large amount of data can quickly accumulate. Set a limit on it's storage & leverage it as paid account feature.
+          Ensure your UI includes the following:
+          <ul style="column-count: 1;">
+            <li>Token allocation</li>
+            <li>Remaining allocation</li>
+            <li>Cost per prompt before execution</li>
+            <li>Token replenishment interval</li>
+            <li>Upgrade call to action</li>
+          </ul>
         </p>
       </div>
 
