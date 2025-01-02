@@ -138,7 +138,7 @@ details[open] summary::after
 #logo
 {
   display: block;
-  width: 9rem;
+  width: 10rem;
   height: auto;
 }
 
@@ -157,7 +157,7 @@ nav
   justify-content: space-between;
   align-items: center;
   gap: var(--size-3);
-  padding-block: var(--size-2);
+  padding-block: var(--size-4) var(--size-1);
 }
 
 nav button
@@ -578,7 +578,7 @@ img.diagram
 
 .intro-wrapper
 {
-  min-height: 70vh;
+  min-height: 80vh;
   border-radius: var(--radius-lg);
   background: var(--purple-900);
   background: radial-gradient(circle at 0% 120%, #000013 10%, #001C3E 80%, #5D00D2 80%, #002344 100%);
@@ -720,7 +720,7 @@ img.diagram
 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: var(--size-6);
+  grid-gap: var(--size-3);
 
       @media screen and (max-width: 1200px){
         grid-template-columns: repeat(3, 1fr) !important;
@@ -797,21 +797,42 @@ article.coming a
   flex-direction: column;
   justify-content: space-between;
   gap: var(--size-1);
+  background: linear-gradient(33deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.66) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.33 );
+  padding: var(--size-3);
+  backdrop-filter: blur(4px);
+  border-radius: var(--size-2);
+}
+
+        .patterns-wrapper article:hover
+        {
+          border-color: rgba(255, 255, 255, 0.66);          
+        }
+
+.patterns-wrapper article h4,
+.patterns-wrapper article p
+{
+  padding-inline: var(--size-0-5);
+}
+
+
+.patterns-wrapper article:hover button[class*="btn-secondary"] svg
+{
+  stroke: var(--purple-500);
 }
 
 .patterns-wrapper article img
 {
   border: 0px solid transparent;
   border-radius: var(--radius-md);
-  outline: 0px solid transparent;
+  box-shadow: 0px 2px 3px var(--grey-op10), 0px 4px 8px var(--grey-op10);
   transition: 1.2s;
 }
 
     .patterns-wrapper article:hover img
     {
-      border: 1px solid var(--grey-op10);
-      outline: 6px solid var(--white-op40);
       transition: var(--transition);
+      box-shadow: 0px 4px 8px var(--grey-op10), 0px 8px 16px var(--grey-op20);
     }
 
 
