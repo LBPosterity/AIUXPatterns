@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="AI UX Patterns" content="">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="Luke Bennis">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI UX Pattern - AI Prompt Placeholder Values</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+  <link rel="stylesheet" type="text/css" href="ds-primitives.css">
+  <link rel="stylesheet" type="text/css" href="ds-tokens.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+</head>
+
+    
+<body id="page-pattern-listing">
+  <div id="header"></div>
+
+  <div class="iframe-wrapper"><iframe  
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com/proto/zZsnp1IG505BXk5qFua0Th/AI-UX-Patterns?page-id=0%3A1&node-id=4456-11469&node-type=frame&viewport=-4811%2C735%2C0.16&hide-ui=1&scaling=scale-down-width" 
+            allowfullscreen>
+    </iframe></div>
+
+
+
+  <div class="content-wrapper">
+
+
+    <div class="tag-author"></div>
+    <h1>Prompt Placeholder Values</h1>
+
+    <div class="col-3-wrapper">
+
+      <div class="col">
+        <h5>Overview</h5>
+        <p class="large">Providing prompt placeholders for key values. Similar to prompt templates, this provides simplified inputs for key values inside a much larger & more complex prompt.</p>
+      </div>
+
+      <div class="col">
+        <h5>User Archetype</h5>
+        <p>This pattern suits a two user workflow where user (A) composes a complex prompt & parametrises key values that affect the output. User (B) Then has a simpler experience filling out these key values only yet submits the full prompt.</p>
+      </div>
+
+      <div class="col">
+        <h5>Considerations</h5>
+        <p>The overall prompt structure needs to be composed to ensure these variablised inputs can be switched out while keeping the prompt integrity. Also, the individual placeholders can be understood on their own for user (B).
+        </p>
+      </div>
+
+  </div>
+
+  </div>
+
+  <div id="footer"></div>
+
+
+  <script type="text/javascript" src="scripts-ui.js"></script>
+
+
+  <script>
+    feather.replace()
+  </script>
+  
+  <script>
+  
+    $(document).ready(function (){
+      $( '#header').load("header.html");
+      $( '#footer').load("footer.html");
+    });
+  
+  
+  </script>
+</body>
+
+</html>
+
+
+
