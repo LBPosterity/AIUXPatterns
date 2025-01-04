@@ -22,7 +22,7 @@ html
   scroll-behavior: smooth;
   background-color: var(--purple-100);
   background-size: cover;
-  animation: bg-animation 9s ease-in-out 0s infinite alternate both;
+  animation: bg-animation 6s ease-in-out 0s infinite alternate both;
   position: relative;
 }
 
@@ -752,14 +752,14 @@ img.diagram
         div[class*="tag-"]
         {
           position: absolute;
-          top: var(--size-1);
-          left: var(--size-1);
+          top: var(--size-2);
+          left: var(--size-2);
           transition: 1.2s;
         }
 
         div[class*="tag-coming"]
         {
-          right: var(--size-1);
+          right: var(--size-2);
           left: auto;
         }
       
@@ -942,20 +942,21 @@ div[class*="tag-"]
 
 .filter-bar
 {
-  display: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--size-2);
+  border-bottom: 1px solid var(--grey-op20);
+  padding-bottom: var(--size-2);
+  margin-bottom: var(--size-3);
 }
 
-    @media  screen and (min-width:1200px) {
-      .filter-bar
+
+    @media  screen and (max-width:1200px) {
+      .toggle-set
       {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: var(--size-2);
-        border-bottom: 1px solid var(--grey-op20);
-        padding-bottom: var(--size-2);
-        margin-bottom: var(--size-3);
+        display: none;
       }
     }
 
@@ -982,9 +983,15 @@ div[class*="tag-"]
   gap: var(--size-4);
 }
 
+        .patterns-wrapper.compact article
+        {
+          padding: var(--size-2);
+        }
+
         .patterns-wrapper.compact article button
         {
           border: none;
+          border-radius: 0;
           background: none;
           box-shadow: none;
           padding: 0;
@@ -993,6 +1000,8 @@ div[class*="tag-"]
         .patterns-wrapper.compact article button svg
         {
           stroke: currentColor;
+          width: var(--size-2);
+          height: var(--size-2);
         }
 
         .patterns-wrapper.compact article p
@@ -1011,6 +1020,59 @@ div[class*="tag-"]
 {
   grid-template-columns: repeat(3, 1fr);
 }
+
+
+
+
+
+/* Pattern Filters ------------------------------ */
+
+.patterns-wrapper
+{
+  min-height: 30rem;
+}
+
+.patterns-wrapper article
+{
+  display: none;
+}
+
+.patterns-wrapper.show-author article:has(.tag-author),
+.patterns-wrapper.show-settings article:has(.tag-settings),
+.patterns-wrapper.show-results article:has(.tag-results),
+.patterns-wrapper.show-editing article:has(.tag-editing),
+.patterns-wrapper.show-agents article:has(.tag-agent)
+{
+  display: block;
+}
+
+.filter-set button:hover
+{
+  background: var(--white);
+}
+
+
+.filter-set button.active
+{
+  border-color: var(--purple-300);
+  padding-inline: var(--size-3);
+}
+
+        @media screen and (max-width: 1200px){
+          .filter-set button
+          {
+            margin: 0px 6px 6px 0px;
+          }
+        }
+
+        @media screen and (max-width: 900px){
+          .filter-set
+          {
+            text-align: center;
+            width: 100%;
+          }
+        }
+
 
 
 /* Pattern Page ------------------------------ */

@@ -6,7 +6,7 @@
   <meta name="keywords" content="HTML,CSS,XML,JavaScript">
   <meta name="author" content="Luke Bennis">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI UX Pattern - AI Prompt Placeholder Values</title>
+  <title>AI UX Pattern - AI Result Rendered Preview</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
  
@@ -24,36 +24,35 @@
   <div id="header"></div>
 
   <div class="iframe-wrapper"><iframe  
-    src="https://embed.figma.com/proto/zZsnp1IG505BXk5qFua0Th/AI-UX-Patterns?page-id=0%3A1&node-id=8072-14585&viewport=-17152%2C2049%2C0.51&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=8072%3A14585&show-proto-sidebar=1&embed-host=share=1&hide-ui=1&scaling=scale-down-width" allowfullscreen>
-    </iframe>
-  </div>
-
-
-
+    src="https://embed.figma.com/proto/zZsnp1IG505BXk5qFua0Th/AI-UX-Patterns?page-id=0%3A1&node-id=7497-14366&viewport=-17152%2C2049%2C0.51&scaling=contain&content-scaling=fixed&starting-point-node-id=7497%3A14366&show-proto-sidebar=1&embed-host=share=1&hide-ui=1&scaling=scale-down-width" allowfullscreen>
+    </iframe></div>
 
 
 
   <div class="content-wrapper">
 
 
-    <div class="tag-author"></div>
-    <h1>Prompt Placeholder Values</h1>
+    <div class="tag-results"></div>
+    <h1>Result Rendered Preview</h1>
 
     <div class="col-3-wrapper">
 
       <div class="col">
         <h5>Overview</h5>
-        <p class="large">Providing prompt placeholders for key values. Similar to prompt templates, this provides simplified inputs for key values inside a much larger & more complex prompt.</p>
+        <p class="large">As AI improved it's ability to generate varied content types, a rendered preview allows user to instantly see not only the initial result but any iterations made as well.</p>
       </div>
 
       <div class="col">
         <h5>User Archetype</h5>
-        <p>This pattern suits a two user workflow where user (A) composes a complex prompt & parametrises key values that affect the output. User (B) Then has a simpler experience filling out these key values only yet submits the full prompt.</p>
+        <p>Likely for more technical users, this pattern is most commonly used for coded results which require a rendering to actually see & review the results accuracy.</p>
+        <p>A general understanding is needed that this is a temporary preview & that some differences may apply when applied eslewhere.</p>
       </div>
 
       <div class="col">
         <h5>Considerations</h5>
-        <p>The overall prompt structure needs to be composed to ensure these variablised inputs can be switched out while keeping the prompt integrity. Also, the individual placeholders can be understood on their own for user (B).
+        <p>Not all file types or result require a preview. Defining what presents in the preview pane is important. A preview is highly effective when relevant but adds friction when it's not required.
+          <br><br>
+        Another consideration is result complexity or length. Having AI generate a single JS function may not require a preview. Perhaps proviging inline options for the preview instead adds user autonomy. 
         </p>
       </div>
 

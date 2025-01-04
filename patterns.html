@@ -52,7 +52,14 @@
   </div>
 
   <div class="filter-bar">
-    <p><strong>Layout</strong></p>
+    <div class="filter-set">
+      <p class="large" style="display: inline-block; padding-inline: var(--size-1);">Filter: </p>
+      <button id="filter-author" class="btn-secondary active">Authoring</button>
+      <button id="filter-settings" class="btn-secondary active">Settings</button>
+      <button id="filter-results" class="btn-secondary active">Results</button>
+      <button id="filter-editing" class="btn-secondary active">Editing</button>
+      <button id="filter-agents" class="btn-secondary active">Agents</button>
+    </div>
     <div class="toggle-set">
       <button class="btn-secondary btn-compact">S</button>
       <button class="btn-secondary btn-regular active">M</button>
@@ -61,7 +68,7 @@
   </div>
 
 
-  <div class="patterns-wrapper">
+  <div class="patterns-wrapper show-author show-settings show-results show-editing show-agents">
 
     
 
@@ -157,12 +164,12 @@
 
       <article>
         <div class="content-wrapper">
-        <img src="assets/thumbnail-configure.png">
-        <h4>Configurable Controls</h4>
+        <img src="assets/thumbnail-settingsure.png">
+        <h4>settingsurable Controls</h4>
         <div class="tag-author"></div>
-        <p>Highly abstracted prompt authoring using configured options & controls.</p>
+        <p>Highly abstracted prompt authoring using settingsured options & controls.</p>
         </div>
-        <a href="pattern-configure-controls.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
+        <a href="pattern-settingsure-controls.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
       </article>
 
       <article>
@@ -197,10 +204,10 @@
 
       <article>
         <div class="content-wrapper">
-        <img src="assets/thumbnail-placeholder.png">
+        <img src="assets/thumbnail-prompt-placeholders.png">
         <h4>Prompt Placeholder Values</h4>
         <div class="tag-author"></div>
-        <p>?????????.</p>
+        <p>Pre defined content slots or conditions or for prompt values.</p>
         </div>
         <a href="pattern-prompt-placeholders.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
       </article>
@@ -257,12 +264,12 @@
 
       <article>
         <div class="content-wrapper">
-        <img src="assets/thumbnail-placeholder.png">
+        <img src="assets/thumbnail-result-variations.png">
         <h4>Result Variations</h4>
         <div class="tag-results"></div>
-        <p>?????????.</p>
+        <p>Providing users multiple results for a single prompt.</p>
         </div>
-        <a href="pattern-prompt-placeholders.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
+        <a href="pattern-result-variations.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
       </article>
 
       <article>
@@ -287,12 +294,12 @@
 
       <article>
         <div class="content-wrapper">
-        <img src="assets/thumbnail-placeholder.png">
-        <h4>Result Preview Render</h4>
+        <img src="assets/thumbnail-result-rendered-preview.png">
+        <h4>Result Rendered Preview</h4>
         <div class="tag-author"></div>
-        <p>?????????.</p>
+        <p>A live preview of generated content, image or code.</p>
         </div>
-        <a href="pattern-prompt-placeholders.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
+        <a href="pattern-result-rendered-preview.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
       </article>
 
       <article class="coming">
@@ -400,6 +407,44 @@
       $(".patterns-wrapper").addClass("large").removeClass("compact");
       });
     });
+
+
+
+    $(document).ready(function (){
+      $("#filter-author").click(function(){
+      $(".patterns-wrapper").toggleClass("show-author");
+      $(this).toggleClass("active");
+      });
+    });
+
+    $(document).ready(function (){
+      $("#filter-settings").click(function(){
+      $(".patterns-wrapper").toggleClass("show-settings");
+      $(this).toggleClass("active");
+      });
+    });
+
+    $(document).ready(function (){
+      $("#filter-results").click(function(){
+      $(".patterns-wrapper").toggleClass("show-results");
+      $(this).toggleClass("active");
+      });
+    });
+
+    $(document).ready(function (){
+      $("#filter-editing").click(function(){
+      $(".patterns-wrapper").toggleClass("show-editing");
+      $(this).toggleClass("active");
+      });
+    });
+
+    $(document).ready(function (){
+      $("#filter-agents").click(function(){
+      $(".patterns-wrapper").toggleClass("show-agents");
+      $(this).toggleClass("active");
+      });
+    });
+
 
 </script>
 
