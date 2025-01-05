@@ -1043,7 +1043,7 @@ div[class*="tag-"]
 .patterns-wrapper.show-editing article:has(.tag-editing),
 .patterns-wrapper.show-agents article:has(.tag-agent)
 {
-  display: block;
+  display: flex;
 }
 
 .filter-set button:hover
