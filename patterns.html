@@ -68,7 +68,7 @@
   </div>
 
 
-  <div class="patterns-wrapper show-author show-settings show-results show-editing show-agents">
+  <div id="patterns" class="patterns-wrapper show-author show-settings show-results show-editing show-agents">
 
     
 
@@ -296,7 +296,7 @@
         <div class="content-wrapper">
         <img src="assets/thumbnail-result-rendered-preview.png">
         <h4>Result Rendered Preview</h4>
-        <div class="tag-author"></div>
+        <div class="tag-results"></div>
         <p>A live preview of generated content, image or code.</p>
         </div>
         <a href="pattern-result-rendered-preview.html"><button class="btn-secondary">View Pattern <i data-feather="arrow-right"></i></button></a>
@@ -444,6 +444,46 @@
       $(this).toggleClass("active");
       });
     });
+
+
+
+</script>
+\
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    // List of valid filters and their corresponding CSS classes
+    const filterMap = {
+        'filter-settings': 'settings-filter',
+        'filter-users': 'users-filter',
+        'filter-dashboard': 'dashboard-filter'
+    };
+
+    // Get URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    console.log('Current URL parameters:', urlParams.toString()); // Debug line
+    
+    // Loop through each filter in the map
+    Object.entries(filterMap).forEach(([paramName, className]) => {
+        // Debug logging
+        console.log('Checking for parameter:', paramName);
+        
+        // Check if this parameter exists in the URL
+        if (urlParams.has(paramName)) {
+            console.log('Found parameter:', paramName);
+            const targetElement = document.querySelector('#patterns');
+            
+            if (targetElement) {
+                console.log('Adding class:', className);
+                targetElement.classList.add(className);
+                targetElement.classList.remove()
+            } else {
+                console.log('Target element not found');
+            }
+        }
+    });
+});
 
 
 </script>

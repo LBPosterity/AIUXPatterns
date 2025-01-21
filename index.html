@@ -134,6 +134,43 @@
     $('#insert-footer').load("footer.html");
   });
 
+  
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // List of valid filters and their corresponding CSS classes
+    const filterMap = {
+        'filter-settings': 'settings-filter',
+        'filter-users': 'users-filter',
+        'filter-dashboard': 'dashboard-filter'
+    };
+
+    // Get URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    console.log('Current URL parameters:', urlParams.toString()); // Debug line
+    
+    // Loop through each filter in the map
+    Object.entries(filterMap).forEach(([paramName, className]) => {
+        // Debug logging
+        console.log('Checking for parameter:', paramName);
+        
+        // Check if this parameter exists in the URL
+        if (urlParams.has(paramName)) {
+            console.log('Found parameter:', paramName);
+            const targetElement = document.querySelector('#patterns');
+            
+            if (targetElement) {
+                console.log('Adding class:', className);
+                targetElement.classList.add(className);
+            } else {
+                console.log('Target element not found');
+            }
+        }
+    });
+});
+
+
+
 </script>
 
 </body>

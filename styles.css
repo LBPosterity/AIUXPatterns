@@ -802,11 +802,12 @@ article.coming a
   padding: var(--size-3);
   backdrop-filter: blur(4px);
   border-radius: var(--size-2);
+  transition: var(--transition-slow);
 }
 
         .patterns-wrapper article:hover
         {
-          border-color: rgba(255, 255, 255, 0.66);          
+          border-color: rgba(255, 255, 255, 1.0);   
         }
 
 .patterns-wrapper article h4,
@@ -863,45 +864,45 @@ div[class*="tag-"]
     div[class*="tag-settings"]
     {
       --tag-bg: var(--orange-500);
-      --tag-text: var(--orange-200);
+      --tag-text: var(--orange-300);
     }
 
         div[class*="tag-settings"]:after
         {
-          content: 'Configuration';
+          content: 'Settings';
         }
 
     div[class*="tag-results"]
     {
       --tag-bg: var(--blue-550);
-      --tag-text: var(--blue-100);
+      --tag-text: var(--blue-200);
     }
 
         div[class*="tag-results"]:after
         {
-          content: 'Result Display';
+          content: 'Results';
         }
 
     div[class*="tag-editing"]
     {
       --tag-bg: var(--green-550);
-      --tag-text: var(--green-100);
+      --tag-text: var(--green-200);
     }
 
         div[class*="tag-editing"]:after
         {
-          content: 'Result Editing';
+          content: 'Editing';
         }
 
     div[class*="tag-agent"]
     {
       --tag-bg: var(--purple-700);
-      --tag-text: var(--purple-100);
+      --tag-text: var(--purple-200);
     }
 
         div[class*="tag-agent"]:after
         {
-          content: 'AI Agent';
+          content: 'Agents';
         }
 
     div[class*="tag-coming"]
@@ -1046,16 +1047,49 @@ div[class*="tag-"]
   display: flex;
 }
 
-.filter-set button:hover
+.filter-set button
 {
-  background: var(--white);
+  box-shadow: none;
+  border: none;
+  border-width: 0px !important;
+  padding-inline: var(--size-3);
+}
+
+button#filter-author.active
+{
+  background: var(--purple-500);
+  color: var(--white);
+}
+
+button#filter-settings.active
+{
+  background: var(--orange-500);
+  color: var(--white);
+}
+
+button#filter-results.active
+{
+  background: var(--blue-500);
+  color: var(--white);
+}
+
+button#filter-editing.active
+{
+  background: var(--green-500);
+  color: var(--white);
+}
+
+button#filter-agents.active
+{
+  background: var(--purple-700);
+  color: var(--white);
 }
 
 
-.filter-set button.active
+.filter-set button:not(.active)
 {
-  border-color: var(--purple-300);
-  padding-inline: var(--size-3);
+  background: var(--grey-op10);
+  color: var(--grey-op70);
 }
 
         @media screen and (max-width: 1200px){
